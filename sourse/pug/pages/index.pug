@@ -1,6 +1,5 @@
 extends layout/main.pug
 
-
 include ../blocks/sContent/_sContent.pug
 include ../blocks/sContact/_sContact.pug
 
@@ -12,13 +11,11 @@ block title
 	- let  title= 'title'
 	title= title
 block pagecontent
-
 	+mob-mnu()
 	+header()
 	+top-nav()
 	+soc()
 	+in-c("checkbox", "text")
-
 	+topLine() 
 	+headerBlock()
 	+sForm()
