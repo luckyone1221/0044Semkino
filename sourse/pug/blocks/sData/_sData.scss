@@ -216,10 +216,137 @@
 		text-transform: uppercase;
 		letter-spacing: rem(2.5);
 	}
-	&__{}
-	&__{}
-	&__{}
-	&__{}
+	//offer-alt
+	&__offer-alt{
+		min-height: rem(300);
+		@include media-breakpoint-up(xl){
+			min-height: 100%;
+		}
+		position: relative;
+		z-index: 1;
+
+		display: flex;
+		align-items: stretch;
+	}
+
+	&__oa-row{
+		@include roww(0);
+		width: 100%;
+	}
+	&__oa-link{
+		width: 100%;
+		height: auto;
+		min-height: rem(300);
+		@include media-breakpoint-up(sm){
+			height: 100%;
+			min-height: 0;
+		}
+
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-end;
+
+		position: relative;
+
+		padding: rem(30) rem(20);
+		@include media-breakpoint-up(xl){
+			padding: rem(53) rem(73);
+		}
+	}
+	&__oa-img{
+		position: absolute;
+		z-index: -1;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		img{
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+	}
+	&__s-txt--offer{
+
+	}
+	&__full-white{
+		min-height: 100%;
+		background-color: $white;
+
+		padding: rem(30) rem(20);
+		@include media-breakpoint-up(xl){
+			padding: rem(95) rem(42) rem(50);
+		}
+
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+
+		@include media-breakpoint-up(xxl){
+			margin-left: -34px;
+		}
+	}
+	&__news{
+		min-height: 100%;
+		background-color: $gray-550;
+		padding: rem(35) rem(41) rem(50);
+	}
+	&__n-title{
+		margin-bottom: rem(52);
+		font-size: rem(30);
+		line-height: 1.2;
+		font-weight: 700;
+		letter-spacing: rem(2.7);
+	}
+	&__n-row{
+		@include media-breakpoint-up(xxl){
+			@include roww(80px)
+		}
+
+		& > *{
+			margin-bottom: rem(30);
+		}
+		margin-bottom: rem(-30);
+
+		padding-bottom: rem(56);
+	}
+	&__n-item{
+		max-width: rem(235);
+
+		font-size: rem(18);
+		line-height: (22/18);
+	}
+	&__n-date{
+		letter-spacing: rem(1.08px);
+		margin-bottom: rem(24);
+	}
+	&__n-headline{
+		display: block;
+		color: $black;
+		&:hover{
+			color: rgba($black, .8);
+		}
+		font-weight: 700;
+		letter-spacing: rem(1.7);
+
+		margin-bottom: rem(20);
+	}
+	&__n-descr{
+		letter-spacing: rem(1.08px);
+	}
+	&__n-btn{
+		@extend .btn;
+		@extend .btn-primary;
+
+		color: $white;
+		padding: rem(15);
+		min-width: rem(200);
+
+		font-size: rem(18px);
+		line-height: (23.67/18);
+		text-transform: uppercase;
+		letter-spacing: rem(1);
+	}
 	&__{}
 	&__{}
 } // end.sData

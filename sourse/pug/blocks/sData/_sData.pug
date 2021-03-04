@@ -31,7 +31,45 @@ mixin sData(data)
 								| участок 6 соток
 								br
 								| все коммуникации
+			.col-xl-6
+				+e.offer-alt
+					+e.oa-row.row
+						.col-sm-6.order-sm-last.order-lg-0
+							+e.oa-link(href='#')
+								+e.oa-img
+									img(loading="lazy" src="img/@2x/foto-archive.jpg" alt="")
+								+e.s-txt--offer
+									| фотоархив
+									br
+									| развития поселка
+						.col-sm-6
+							+e.full-white
+								+e.o-title СПЕЦПРЕДЛОЖЕНИЕ 3
+								+e.o-txt
+									| готовый коттедж 150м2
+									br
+									| участок 6 соток
+									br
+									| все коммуникации
+								+e.o-btn(href='#') Смотреть
+			.col-xl-6
+				+e.news
+					+e.n-title НОВОСТИ ПОСЕЛКА
+					+e.n-row.row
+						+nItem()
+						+nItem()
+						+nItem()
+					+e.n-btn(href='#') все новости
+							//foto-archive
 	// end sData
+mixin nItem()
+	.col-sm-4
+		+e.n-item
+			+e.n-date 29.12.2020
+			+e.n-headline(href='#') Зимняя сказка в «Новом Сёмкино»!
+			+e.n-descr
+				| Завершены работы по новогоднему оформлению
+
 mixin oWhiteBox(title)
 	+e.o-white-box
 		+e.o-title=title
