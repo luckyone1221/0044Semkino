@@ -7,6 +7,7 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width,initial-scale=1.0">
 		<link type="image/ico" href="img/favicon.ico" rel="shortcut icon"><meta name="format-detection" content="telephone=no"> 
+		<link href="libs/swiper/css/swiper.min.css" rel="stylesheet"/>
 		<link href="css/main.min.css" rel="stylesheet"/>
 	</head>
 	<body>
@@ -16,23 +17,21 @@
 				</div>
 				<div class="menu-mobile__inner">
 					<ul class="navMenu" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
-						<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#sContact" itemprop="url">Главная</a>
+						<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#" itemprop="url">о поселке</a>
 						</li>
-						<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#" itemprop="url">Услуги  </a>
+						<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#" itemprop="url">генплан</a>
 						</li>
-						<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#" itemprop="url">Подбор септика   </a>
+						<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#" itemprop="url">парк</a>
 						</li>
-						<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#" itemprop="url">Акции </a>
+						<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#" itemprop="url">кварталы</a>
 						</li>
-						<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#" itemprop="url"> О компании  </a>
+						<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#" itemprop="url">фото и видео</a>
 						</li>
-						<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#" itemprop="url"> Доставка и оплата </a>
+						<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#" itemprop="url">новости</a>
 						</li>
-						<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#" itemprop="url"> Клиентам  </a>
+						<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#" itemprop="url">контакты</a>
 						</li>
-						<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#" itemprop="url"> Наши работы   </a>
-						</li>
-						<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#sContact" itemprop="url">Контакты </a>
+						<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#" itemprop="url">партнеры</a>
 						</li>
 					</ul>
 					<div class="text-right"></div>
@@ -40,76 +39,267 @@
 			</div>
 			<!--  мобильное меню-->
 			<!-- start header-->
-			<header class="header" id="header">
-			</header>
-			<!-- end header-->
-			<!-- start top-nav-->
-			<div class="top-nav block-with-lazy">
-				<div class="container">
-					<div class="row">
-						<div class="col-auto d-lg-none">
-							<div class="toggle-menu-mobile toggle-menu-mobile--js"><span></span>
+			<header class="header header--js" id="header">
+				<!-- start top-nav-->
+				<div class="top-nav block-with-lazy">
+					<div class="top-nav__container container">
+						<div class="top-nav__main-row row">
+							<div class="col-auto"><a class="top-nav__logo" href="/"><img loading="lazy" src="img/@2x/logo.png" alt=""/></a>
+							</div>
+							<div class="col">
+								<div class="top-nav__top-row row">
+									<div class="col-auto ms-auto"><a class="top-nav__tel" href="tel:4912392020"><span class="top-nav__t-icon"><img loading="lazy" src="img/@2x/tel-icon.png" alt=""/></span><span class="top-nav__t-txt">(4912) 39-20-20</span></a>
+									</div>
+									<div class="col-auto d-none d-sm-block"><a class="top-nav__buy-btn" href="#">купить</a>
+									</div>
+									<div class="col-auto">
+										<div class="top-nav__burger burger-js"><span></span>
+										</div>
+									</div>
+								</div>
+								<div class="top-nav__menu d-none d-xl-block">
+									<ul class="navMenu" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
+										<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#" itemprop="url">о поселке</a>
+										</li>
+										<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#" itemprop="url">генплан</a>
+										</li>
+										<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#" itemprop="url">парк</a>
+										</li>
+										<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#" itemprop="url">кварталы</a>
+										</li>
+										<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#" itemprop="url">фото и видео</a>
+										</li>
+										<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#" itemprop="url">новости</a>
+										</li>
+										<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#" itemprop="url">контакты</a>
+										</li>
+										<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#" itemprop="url">партнеры</a>
+										</li>
+									</ul>
+								</div>
 							</div>
 						</div>
-						<div class="col">
-							<ul class="navMenu" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
-								<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#sContact" itemprop="url">Главная</a>
+					</div>
+				</div>
+				<div class="green-line d-none d-xl-block">
+					<div class="container">
+						<ul class="green-line__menu">
+							<li><a href="#">Что такое домовладение</a></li>
+							<li><a href="#">Расположение</a></li>
+							<li><a href="#">Кварталы</a></li>
+							<li><a href="#">Почему "Новое Сёмкино"?</a></li>
+							<li><a href="#">Документы</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="sideMnu sideMnu--js">
+					<div class="sideMnu__box sideMnu-box-js">
+						<div class="sideMnu__content">
+							<div class="sideMnu__close-btn burger-js"><img loading="lazy" src="img/@2x/cross.png" alt=""/>
+							</div>
+							<ul class="sideMnu__menu">
+								<li><a href="#">о поселкЕ</a><li>
+									<ul class="sideMnu__sub-menu">
+										<li><a href="#">Что такое домовладение</a></li>
+										<li><a href="#">Расположение</a></li>
+										<li><a href="#">Кварталы</a></li>
+										<li><a href="#">Почему "Новое Сёмкино"?</a></li>
+										<li><a href="#">Документы</a></li>
+									</ul></li>
 								</li>
-								<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#" itemprop="url">Услуги  </a>
+								<li><a href="#">генплан</a></li>
+								<li><a href="#">парк</a></li>
+								<li><a href="#">кварталы</a><li>
+									<ul class="sideMnu__sub-menu">
+										<li><a href="#">Парковый</a></li>
+										<li><a href="#">Лисичкино</a></li>
+										<li><a href="#">Большая полянка</a></li>
+										<li><a href="#">Шишкино</a></li>
+										<li><a href="#">Лужки</a></li>
+									</ul></li>
 								</li>
-								<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#" itemprop="url">Подбор септика   </a>
-								</li>
-								<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#" itemprop="url">Акции </a>
-								</li>
-								<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#" itemprop="url"> О компании  </a>
-								</li>
-								<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#" itemprop="url"> Доставка и оплата </a>
-								</li>
-								<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#" itemprop="url"> Клиентам  </a>
-								</li>
-								<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#" itemprop="url"> Наши работы   </a>
-								</li>
-								<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#sContact" itemprop="url">Контакты </a>
+								<li><a href="#">фото и видео</a></li>
+								<li><a href="#">новости</a></li>
+								<li><a href="#">партнеры</a></li>
+								<li><a href="#">контакты</a></li>
+								<li><a class="buy-link" href="#">купить</a><li>
+									<ul class="sideMnu__sub-menu">
+										<li><a href="#">Проекты</a></li>
+										<li><a href="#">Цены</a></li>
+										<li><a href="#">Спецпредложения</a></li>
+									</ul></li>
 								</li>
 							</ul>
 						</div>
+						<div class="sideMnu__foot">
+							<div class="row">
+								<div class="col col-sm-6"><a class="sideMnu__tel" href="tel:4912392020"><span class="sideMnu__t-icon"><img loading="lazy" src="img/@2x/tel-white.png" alt=""/></span><span class="sideMnu__t-txt">(4912) 39-20-20</span></a>
+									<div class="sideMnu__office-txt">Офис продаж:<br/>г. Рязань, ул. Садовая, д. 32
+									</div>
+								</div>
+								<div class="col-auto col-sm-6">
+									<div class="sideMnu__soc-row row justify-content-end">
+										<div class="col-auto"><a class="sideMnu__soc-item" href="#"><img loading="lazy" src="img/@2x/fb.png" alt=""/></a>
+										</div>
+										<div class="col-auto"><a class="sideMnu__soc-item" href="#"><img loading="lazy" src="img/@2x/b.png" alt=""/></a>
+										</div>
+										<div class="col-auto"><a class="sideMnu__soc-item" href="#"><img loading="lazy" src="img/@2x/inst.png" alt=""/></a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
 					</div>
 				</div>
-			</div>
-			<!-- end top-nav-->
-			<div class="soc"><a class="soc__item" href="#" target="_blank">
-				<svg class="icon icon-fb ">
-					<use xlink:href="img/svg/sprite.svg#fb"></use>
-				</svg></a><a class="soc__item" href="#" target="_blank">
-				<svg class="icon icon-instagram ">
-					<use xlink:href="img/svg/sprite.svg#instagram"></use>
-				</svg></a><a class="soc__item" href="#" target="_blank">
-				<svg class="icon icon-telegram ">
-					<use xlink:href="img/svg/sprite.svg#telegram"></use>
-				</svg></a>
-			</div>
-			<label class="custom-input form-check"><input class="custom-input__input form-check-input" name="checkbox" type="checkbox"/><span class="custom-input__text form-check-label">text</span>
-			</label>
-			<!-- start topLine-->
-			<section class="topLine section" id="topLine">
-				<div class="container">
-					<div class="section-title text-center">
-						<h2>topLine</h2>
-					</div>
-					<div class="row"></div>
-				</div>
-			</section>
-			<!-- end topLine-->
+				<!-- end top-nav-->
+			</header>
+			<!-- end header-->
 			<!-- start headerBlock-->
-			<div class="headerBlock section" id="headerBlock">
-				<div class="container">
-					<div class="section-title text-center">
-						<h2>headerBlock ds dfsdfdsfsd</h2>
+			<div class="headerBlock" id="headerBlock">
+				<div class="headerBlock__sl-cont">
+					<div class="swiper-container headerBlock-slider-js">
+						<div class="swiper-prev">
+							<svg class="icon icon-chevron-left ">
+								<use xlink:href="img/svg/sprite.svg#chevron-left"></use>
+							</svg>
+						</div>
+						<div class="swiper-next">
+							<svg class="icon icon-chevron-right ">
+								<use xlink:href="img/svg/sprite.svg#chevron-right"></use>
+							</svg>
+						</div>
+						<div class="swiper-wrapper">
+							<div class="swiper-slide">
+								<div class="headerBlock__img"><img class="swiper-lazy" src="#" data-src="img/@2x/header-sl-1.jpg" alt=""/>
+								</div>
+								<div class="headerBlock__slide-cont container">
+									<div class="headerBlock__headline">Благоустроенная<br/>территория
+									</div>
+								</div>
+							</div>
+							<div class="swiper-slide">
+								<div class="headerBlock__img"><img class="swiper-lazy" src="#" data-src="img/@2x/header-sl-1.jpg" alt=""/>
+								</div>
+								<div class="headerBlock__slide-cont container">
+									<div class="headerBlock__headline">Благоустроенная<br/>территория
+									</div>
+								</div>
+							</div>
+							<div class="swiper-slide">
+								<div class="headerBlock__img"><img class="swiper-lazy" src="#" data-src="img/@2x/header-sl-1.jpg" alt=""/>
+								</div>
+								<div class="headerBlock__slide-cont container">
+									<div class="headerBlock__headline">Благоустроенная<br/>территория
+									</div>
+								</div>
+							</div>
+							<div class="swiper-slide">
+								<div class="headerBlock__img"><img class="swiper-lazy" src="#" data-src="img/@2x/header-sl-1.jpg" alt=""/>
+								</div>
+								<div class="headerBlock__slide-cont container">
+									<div class="headerBlock__headline">Благоустроенная<br/>территория
+									</div>
+								</div>
+							</div>
+							<div class="swiper-slide">
+								<div class="headerBlock__img"><img class="swiper-lazy" src="#" data-src="img/@2x/header-sl-1.jpg" alt=""/>
+								</div>
+								<div class="headerBlock__slide-cont container">
+									<div class="headerBlock__headline">Благоустроенная<br/>территория
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="swiper-pagination"></div>
 					</div>
-					<div class="row"></div>
 				</div>
 			</div>
 			<!-- end headerBlock-->
+			<!-- start sDescr-->
+			<section class="sDescr section" id="sDescr">
+				<div class="container">
+					<div class="section-title">
+						<h2 class="text-center">Коттеджный поселок “Семкино”</h2>
+						<p>Коттеджный посёлок "Новое Сёмкино" расположен на территории села Сёмкино Мурминского сельского поселения – одном из самых экологически чистых мест Рязанского района, в окружении смешанного леса, с одной стороны, озёр и реки Оки – с другой, что создаёт естественную рекреационную зону посёлка. Использование существующего ландшафта позволяет избежать ощущения тесноты – традиционного недостатка многих посёлков, а расстояние 1,5 км от автодороги Рязань-Спасск – полностью забыть о городском шуме.</p>
+					</div>
+				</div>
+			</section>
+			<!-- end sDescr-->
+			<!-- start sData-->
+			<div class="sData" id="sData">
+				<div class="sData__main-row row">
+					<div class="col-lg-6">
+						<div class="sData__sl-cont">
+							<div class="swiper-container sData-slider-js">
+								<div class="swiper-prev">
+									<svg class="icon icon-chevron-left ">
+										<use xlink:href="img/svg/sprite.svg#chevron-left"></use>
+									</svg>
+								</div>
+								<div class="swiper-next">
+									<svg class="icon icon-chevron-right ">
+										<use xlink:href="img/svg/sprite.svg#chevron-right"></use>
+									</svg>
+								</div>
+								<div class="swiper-wrapper">
+									<div class="swiper-slide">
+										<div class="sData__s-img"><img class="swiper-lazy" src="#" data-src="img/@2x/data-slide-1.jpg" alt=""/>
+										</div>
+										<div class="sData__s-content">
+											<div class="sData__s-txt">Фотогалерея<br/>жителей поселка
+											</div>
+										</div>
+									</div>
+									<div class="swiper-slide">
+										<div class="sData__s-img"><img class="swiper-lazy" src="#" data-src="img/@2x/data-slide-1.jpg" alt=""/>
+										</div>
+										<div class="sData__s-content">
+											<div class="sData__s-txt">Фотогалерея<br/>жителей поселка
+											</div>
+										</div>
+									</div>
+									<div class="swiper-slide">
+										<div class="sData__s-img"><img class="swiper-lazy" src="#" data-src="img/@2x/data-slide-1.jpg" alt=""/>
+										</div>
+										<div class="sData__s-content">
+											<div class="sData__s-txt">Фотогалерея<br/>жителей поселка
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-6">
+						<div class="sData__offer">
+							<div class="sData__o-img"><img loading="lazy" src="img/@2x/offer-img.jpg" alt=""/>
+							</div>
+							<div class="sData__o-row row">
+								<div class="col-sm-6">
+									<div class="sData__o-white-box">
+										<div class="sData__o-title">СПЕЦПРЕДЛОЖЕНИЕ 1
+										</div>
+										<div class="sData__o-txt">готовый коттедж 150м2<br/>участок 6 соток<br/>все коммуникации
+										</div><a class="sData__o-btn" href="#">Смотреть</a>
+									</div>
+								</div>
+								<div class="col-6 d-none d-sm-block"></div>
+								<div class="col-sm-6"><a class="sData__o-video" href="#"><span class="sData__play-btn"></span><span class="sData__v-txt">видео галерея<br/>поселка</span></a>
+								</div>
+								<div class="col-sm-6">
+									<div class="sData__o-white-box">
+										<div class="sData__o-title">СПЕЦПРЕДЛОЖЕНИЕ 2
+										</div>
+										<div class="sData__o-txt">готовый коттедж 150м2<br/>участок 6 соток<br/>все коммуникации
+										</div><a class="sData__o-btn" href="#">Смотреть</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- end sData-->
 			<!-- start sForm-->
 			<section class="sForm section" id="sForm">
 				<div class="container">
@@ -156,9 +346,7 @@
 		</div>
 		<!-- #modal-call-->
 		<!-- end modals-->
-		<link href="libs/swiper/css/swiper.min.css" rel="stylesheet"/>
 		<link href="libs/@fancyapps/fancybox/jquery.fancybox.min.css" rel="stylesheet"/>
-		<script src="libs/loading-attribute-polyfill/loading-attribute-polyfill.min.js"></script>
 		<!-- modal libs-->
 		<script src="libs/jquery/jquery.min.js"></script>
 		<script src="libs/@fancyapps/fancybox/jquery.fancybox.min.js"></script>

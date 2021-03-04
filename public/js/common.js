@@ -240,8 +240,6 @@ var JSCCommon = {
 var $ = jQuery;
 
 function eventHandler() {
-	var _defaultSl;
-
 	JSCCommon.ifie();
 	JSCCommon.modalCall();
 	JSCCommon.tabscostume('.tabs--js');
@@ -253,55 +251,65 @@ function eventHandler() {
 
 	var x = window.location.host;
 	var screenName;
-	screenName = document.body.dataset.bg;
+	screenName = '01.png';
 
 	if (screenName && x.includes("localhost:30")) {
 		document.body.insertAdjacentHTML("beforeend", "<div class=\"pixel-perfect\" style=\"background-image: url(screen/".concat(screenName, ");\"></div>"));
+	} //luckyone js
+	//calc header height
+
+
+	var header = document.querySelector(".header--js");
+
+	function calcHeaderHeight() {
+		document.documentElement.style.setProperty('--header-height', "".concat(header.offsetHeight, "px"));
 	}
 
-	function whenResize() {
-		var topH = document.querySelector("header ").offsetHeight;
-
-		if (topH) {
-			if ($(window).scrollTop() > topH) {
-				document.querySelector('.top-nav  ').classList.add('fixed');
-			} else {
-				document.querySelector('.top-nav  ').classList.remove('fixed');
-			}
-		}
-	}
-
-	window.addEventListener('resize', function () {
-		whenResize();
-	}, {
+	window.addEventListener('resize', calcHeaderHeight, {
 		passive: true
 	});
-	whenResize();
-	var defaultSl = (_defaultSl = {
-		spaceBetween: 0,
-		lazy: {
-			loadPrevNext: true
-		},
-		watchOverflow: true
-	}, _defineProperty(_defaultSl, "spaceBetween", 0), _defineProperty(_defaultSl, "loop", true), _defineProperty(_defaultSl, "navigation", {
-		nextEl: '.swiper-button-next',
-		prevEl: '.swiper-button-prev'
-	}), _defineProperty(_defaultSl, "pagination", {
-		el: ' .swiper-pagination',
-		type: 'bullets',
-		clickable: true // renderBullet: function (index, className) {
-		// 	return '<span class="' + className + '">' + (index + 1) + '</span>';
-		// }
+	window.addEventListener('scroll', calcHeaderHeight, {
+		passive: true
+	});
+	calcHeaderHeight(); //
 
-	}), _defaultSl);
-	var swiper4 = new Swiper('.sBanners__slider--js', _objectSpread(_objectSpread({}, defaultSl), {}, {
-		slidesPerView: 'auto',
-		freeMode: true,
-		loopFillGroupWithBlank: true,
-		touchRatio: 0.2,
-		slideToClickedSlide: true,
-		freeModeMomentum: true
-	})); // modal window
+	var defaultSl = {
+		lazy: {
+			loadPrevNext: true,
+			loadPrevNextAmount: 3
+		},
+		loop: true,
+		//
+		navigation: {
+			nextEl: '.swiper-next',
+			prevEl: '.swiper-prev'
+		}
+	}; // menu
+
+	$('.burger-js').click(function () {
+		$('body').toggleClass('fixed2');
+		$('.sideMnu--js').fadeToggle(function () {
+			$(this).toggleClass('active');
+		});
+	});
+	$('.sideMnu--js').click(function () {
+		if (!event.target.closest('.sideMnu-box-js')) {
+			$('body').removeClass('fixed2');
+			$('.sideMnu--js').fadeOut(function () {
+				$(this).removeClass('active');
+			});
+		}
+	}); //
+
+	var headBlSlider = new Swiper('.headerBlock-slider-js', _objectSpread(_objectSpread({}, defaultSl), {}, {
+		pagination: {
+			el: $(this).find('.swiper-pagination'),
+			type: 'bullets',
+			clickable: true
+		}
+	})); //
+
+	var dataSlider = new Swiper('.sData-slider-js', _objectSpread({}, defaultSl)); //end luckyone js
 }
 
 ;

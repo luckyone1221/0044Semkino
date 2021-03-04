@@ -1,0 +1,42 @@
+// start .sDescr
+.sDescr {
+	--sTPB: #{rem(0)};
+
+	background-color: $light;
+	@include media-breakpoint-up(xl){
+		--sPT: #{rem(55)};
+		--sPB: #{rem(69)};
+	}
+
+	.section-title{
+		margin-left: auto;
+		margin-right: auto;
+		@include media-breakpoint-up(sm){
+			max-width: rem(790);
+		}
+		h2{
+			color: $primary;
+			font-weight: bold;
+			font-size: rem(36);
+			letter-spacing: rem(.9px);
+
+			margin-bottom: rem(30);
+			@include media-breakpoint-up(xl){
+				margin-bottom: rem(39);
+			}
+		}
+		p{
+			color: $black;
+			font-size: rem(18px);
+			line-height: (28/18);
+			letter-spacing: rem(-0.36px);
+		}
+	}
+	&__{}
+	&__{}
+	&__{}
+	&__{}
+	&__{}
+	&__{}
+	&__{}
+} // end.sDescr

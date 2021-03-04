@@ -1,30 +1,95 @@
 mixin mob-mnu()
-	-
-		//- let path = require('path');
-		//- let fs = require('fs');
-		//- var requestURL = 'top-nav.json';
-		//- var request = new XMLHttpRequest();
-		//- request.open('GET', requestURL);
-		//- request.responseType = 'json';
-		//- let dataJson = JSON.parse(json);
-	//- h1= dataJson['lala'] 
 	+b.menu-mobile--js.d-lg-none
 		+b.toggle-menu-mobile--js
 			span
 		+e.inner
-		
 			+mnu()
 			.text-right
 	//  мобильное меню
+
 mixin top-nav() 
 	// start top-nav
 	+b.top-nav.block-with-lazy
-		.container
-			.row
-				.col-auto.d-lg-none
-					+b.toggle-menu-mobile--js
-						span
+		+e.container.container
+			+e.main-row.row
+				.col-auto
+					+e.logo(href='/')
+						img(loading="lazy" src="img/@2x/logo.png" alt="")
 				.col
-					+mnu()
-					
+					+e.top-row.row
+						.col-auto.ms-auto
+							+e.tel(href='tel:4912392020')
+								+e.t-icon
+									img(loading="lazy" src="img/@2x/tel-icon.png" alt="")
+								+e.t-txt (4912) 39-20-20
+						.col-auto.d-none.d-sm-block
+							+e.buy-btn(href='#') купить
+						.col-auto
+							+e.burger.burger-js
+								span
+					+e.menu.d-none.d-xl-block
+						+mnu()
+	+b.green-line.d-none.d-xl-block
+		.container
+			+e.UL.menu
+				li: a(href='#') Что такое домовладение
+				li: a(href='#') Расположение
+				li: a(href='#') Кварталы
+				li: a(href='#') Почему "Новое Сёмкино"?
+				li: a(href='#') Документы
+	+b.sideMnu--js
+		+e.box.sideMnu-box-js
+			+e.content
+				+e.close-btn.burger-js
+					img(loading="lazy" src="img/@2x/cross.png" alt="")
+				+e.UL.menu
+					li
+						a(href="#") о поселкЕ
+						+e.UL.sub-menu
+							li: a(href="#") Что такое домовладение
+							li: a(href="#") Расположение
+							li: a(href="#") Кварталы
+							li: a(href="#") Почему "Новое Сёмкино"?
+							li: a(href="#") Документы
+					li: a(href="#") генплан
+					li: a(href="#") парк
+					li
+						a(href="#") кварталы
+						+e.UL.sub-menu
+							li: a(href="#") Парковый
+							li: a(href="#") Лисичкино
+							li: a(href="#") Большая полянка
+							li: a(href="#") Шишкино
+							li: a(href="#") Лужки
+					li: a(href="#") фото и видео
+					li: a(href="#") новости
+					li: a(href="#") партнеры
+					li: a(href="#") контакты
+					li
+						a.buy-link(href="#") купить
+						+e.UL.sub-menu
+							li: a(href="#") Проекты
+							li: a(href="#") Цены
+							li: a(href="#") Спецпредложения
+			+e.foot
+				.row
+					.col.col-sm-6
+						+e.tel(href='tel:4912392020')
+							+e.t-icon
+								img(loading="lazy" src="img/@2x/tel-white.png" alt="")
+							+e.t-txt (4912) 39-20-20
+						+e.office-txt
+							| Офис продаж:
+							br
+							| г. Рязань, ул. Садовая, д. 32
+					.col-auto.col-sm-6
+						+e.soc-row.row.justify-content-end
+							+smSocItem('fb')
+							+smSocItem('b')
+							+smSocItem('inst')
 	// end top-nav
+
+mixin smSocItem(imgName)
+	.col-auto
+		+e.soc-item(href='#')
+			img(loading="lazy" src=`img/@2x/${imgName}.png` alt="")

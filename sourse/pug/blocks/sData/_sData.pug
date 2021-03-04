@@ -1,0 +1,58 @@
+mixin sData(data)
+	// start sData
+	+b.sData#sData&attributes(attributes)
+		+e.main-row.row
+			.col-lg-6
+				+dataSlider()
+			.col-lg-6
+				+e.offer
+					+e.o-img
+						img(loading="lazy" src="img/@2x/offer-img.jpg" alt="")
+					+e.o-row.row
+						.col-sm-6
+							+oWhiteBox('СПЕЦПРЕДЛОЖЕНИЕ 1')
+								| готовый коттедж 150м2
+								br
+								| участок 6 соток
+								br
+								| все коммуникации
+						.col-6.d-none.d-sm-block
+						.col-sm-6
+							+e.o-video(href='#')
+								+e.play-btn
+								+e.v-txt
+									| видео галерея
+									br
+									| поселка
+						.col-sm-6
+							+oWhiteBox('СПЕЦПРЕДЛОЖЕНИЕ 2')
+								| готовый коттедж 150м2
+								br
+								| участок 6 соток
+								br
+								| все коммуникации
+	// end sData
+mixin oWhiteBox(title)
+	+e.o-white-box
+		+e.o-title=title
+		+e.o-txt
+			block
+		+e.o-btn(href='#') Смотреть
+mixin dataSlider()
+	+e.sl-cont
+		.swiper-container.sData-slider-js
+			+arrow()
+			.swiper-wrapper
+				+dataSlide()
+				+dataSlide()
+				+dataSlide()
+
+mixin dataSlide()
+	.swiper-slide
+		+e.s-img
+			img.swiper-lazy(src="#" data-src="img/@2x/data-slide-1.jpg" alt="")
+		+e.s-content
+			+e.s-txt
+				| Фотогалерея
+				br
+				| жителей поселка

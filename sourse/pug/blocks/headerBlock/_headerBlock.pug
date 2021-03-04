@@ -1,10 +1,24 @@
 mixin headerBlock()
 	// start headerBlock
-	+b.headerBlock.section#headerBlock&attributes(attributes)
-		.container
-			+b.section-title.text-center
-				h2 headerBlock ds dfsdfdsfsd
-
-			.row
-						
+	+b.headerBlock#headerBlock&attributes(attributes)
+		+e.sl-cont
+			.swiper-container.headerBlock-slider-js
+				+arrow()
+				.swiper-wrapper
+					+headerBlSlide()
+					+headerBlSlide()
+					+headerBlSlide()
+					+headerBlSlide()
+					+headerBlSlide()
+				.swiper-pagination
 	// end headerBlock
+
+mixin headerBlSlide()
+	.swiper-slide
+		+e.img
+			img.swiper-lazy(src="#" data-src="img/@2x/header-sl-1.jpg" alt="")
+		+e.slide-cont.container
+			+e.headline
+				| Благоустроенная
+				br
+				| территория
