@@ -1,4 +1,143 @@
 .footer {
-	padding: 50px 0;
 	background-color: $dark-green;
+
+
+	padding: rem(60) 0;
+	@include media-breakpoint-up(xl){
+		padding: 69px 0 rem(60);
+	}
+
+	&__container{
+		@include media-breakpoint-up(xxl){
+			padding-left: 55px;
+		}
+	}
+	&__main-row{
+		padding-bottom: rem(50);
+		@include media-breakpoint-up(xl){
+			padding-bottom: rem(89px);
+		}
+	}
+	.row{
+		@include roww(30px);
+		& > *{
+			margin-bottom: rem(30);
+		}
+
+		margin-bottom: rem(-30);
+	}
+	&__menu{
+		ul{
+			display: flex;
+			align-items: center;
+			flex-wrap: wrap;
+			margin: 0 rem(-15);
+			@include media-breakpoint-up(lg){
+				display: block;
+				margin: 0;
+			}
+
+			list-style: none;
+			padding: 0;
+		}
+		li{
+			padding: 0 rem(15);
+			margin-bottom: rem(15);
+			@include media-breakpoint-up(lg){
+				padding: 0;
+				margin-bottom: rem(22);
+			}
+		}
+		a{
+			color: $white;
+			&:hover{
+				color: rgba($white, .8);
+			}
+			font-weight: 700;
+			line-height: (23.67/18);
+			letter-spacing: rem(1);
+		}
+	}
+	&__title-menu{
+		@include media-breakpoint-up(xxl){
+			min-width: rem(150);
+		}
+	}
+	&__title{
+		color: $white;
+		font-weight: 700;
+		margin-bottom: rem(27px);
+	}
+	&__t-menu{
+		ul{
+			list-style: none;
+			padding: 0;
+			margin: 0;
+		}
+		li{
+			margin-bottom: rem(8);
+		}
+		a{
+			display: block;
+			line-height: 1.2;
+			color: $white;
+			&:hover{
+				color: rgba($white, .8);
+			}
+
+			font-size: calc(#{rem(4)} + 10px);
+		}
+	}
+	//
+	.soc-row{
+		padding-bottom: rem(30);
+		@include media-breakpoint-up(xl){
+			padding-bottom: rem(73px);
+		}
+		&__item{
+
+		}
+	}
+	&__tell{
+		display: block;
+		color: $white;
+		&:hover{
+			color: rgba($white, .8);
+		}
+
+		font-size: rem(30);
+		letter-spacing: rem(2);
+		margin-bottom: rem(8);
+	}
+	&__office-txt{
+		color: $white;
+		line-height: 1.4;
+		letter-spacing: rem(1);
+	}
+	&__lower-row{
+
+	}
+	&__copyrighnt{
+		color: $white;
+		line-height: (22/18);
+		letter-spacing: rem(1.5);
+	}
+	&__development{
+		@include media-breakpoint-up(xxl){
+			margin-right: rem(144px);
+		}
+		color: $white;
+		line-height: (22/18);
+		letter-spacing: rem(1.5);
+		a{
+			display: block;
+			color: $white;
+			&:hover{
+				color: rgba($white, .8);
+			}
+		}
+	}
+	&__{}
+	&__{}
+	&__{}
 }

@@ -83,7 +83,7 @@ mixin top-nav()
 							br
 							| г. Рязань, ул. Садовая, д. 32
 					.col-auto.col-sm-6
-						+e.soc-row.row.justify-content-end
+						+b.soc-row.row.justify-content-end
 							+smSocItem('fb')
 							+smSocItem('b')
 							+smSocItem('inst')
@@ -91,5 +91,5 @@ mixin top-nav()
 
 mixin smSocItem(imgName)
 	.col-auto
-		+e.soc-item(href='#')
+		+e.item(href='#')
 			img(loading="lazy" src=`img/@2x/${imgName}.png` alt="")

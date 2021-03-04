@@ -1,2 +1,69 @@
 mixin footer()
-	footer.footer
+  +b.FOOTER.footer
+    +e.container.container
+      +e.main-row.row
+        .col-lg
+          +e.menu
+            ul
+              li: a(href='#') Генплан
+              li: a(href='#') Новости
+              li: a(href='#') Контакты
+              li: a(href='#') Партнеры
+              li: a(href='#') Парк
+        .col-6.col-md-auto
+          +e.title-menu
+            +e.title О поселке
+            +e.t-menu
+              ul
+                li: a(href='#') Документы
+                li: a(href='#') Почему "Новое Сёмкино"?
+                li: a(href='#') Кварталы
+                li: a(href='#') Расположение
+                li: a(href='#') Что такое домовладение
+        .col-6.col-md-auto
+          +e.title-menu
+            +e.title Кварталы
+            +e.t-menu
+              ul
+                li: a(href='#') Большая полянка
+                li: a(href='#') Парковый
+                li: a(href='#') Лисичкино
+                li: a(href='#') Шишкино
+                li: a(href='#') Лужки
+        .col-6.col-md-auto
+          +e.title-menu
+            +e.title Галерея поселка
+            +e.t-menu
+              ul
+                li: a(href='#') Фотографии жителей поселка
+                li: a(href='#') Фотоархив поселка
+                li: a(href='#') Видео галерея поселка
+        .col-6.col-md-auto.ms-xxl-50
+          +e.title-menu
+            +e.title Купить
+            +e.t-menu
+              ul
+                li: a(href='#') Проекты
+                li: a(href='#') Цены
+                li: a(href='#') Спецпредложения
+        .col-md-auto.me-xl-auto.ps-xxl-25.pe-xxl-44
+          +b.soc-row.row
+            +smSocItem('fb')
+            +smSocItem('b')
+            +smSocItem('inst')
+          +e.tell(href='tel:+74912392020') +7 (4912) 39-20-20
+          +e.office-txt
+            | Офис продаж: г. Рязань,
+            br
+            | ул. Садовая, д. 32
+      +e.lower-row.row
+        .col-sm
+          +e.copyrighnt
+            | Copiright new-semkino.ru
+            br
+            | Все права защищены
+        .col-sm-auto
+          +e.development
+            | разработка сайта
+            br
+            a(href='www.smartlab.ru' target="_blank") www.smartlab.ru
