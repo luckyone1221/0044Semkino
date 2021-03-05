@@ -7,32 +7,51 @@ mixin sideMnu()
 				+e.UL.menu
 					li
 						a(href="#") о поселкЕ
-						+e.UL.sub-menu
-							li: a(href="#") Что такое домовладение
-							li: a(href="#") Расположение
-							li: a(href="#") Кварталы
-							li: a(href="#") Почему "Новое Сёмкино"?
-							li: a(href="#") Документы
-					li: a(href="#") генплан
-					li: a(href="#") парк
+						ul.sideMnu__sub-menu
+							li
+								a(href="#") Что такое домовладение
+							li
+								a(href="#") Расположение
+							li
+								a(href="#") Кварталы
+							li
+								a(href="#") Почему "Новое Сёмкино"?
+							li
+								a(href="#") Документы
+					li
+						a(href="#") генплан
+					li
+						a(href="#") парк
 					li
 						a(href="#") кварталы
-						+e.UL.sub-menu
-							li: a(href="#") Парковый
-							li: a(href="#") Лисичкино
-							li: a(href="#") Большая полянка
-							li: a(href="#") Шишкино
-							li: a(href="#") Лужки
-					li: a(href="#") фото и видео
-					li: a(href="#") новости
-					li: a(href="#") партнеры
-					li: a(href="#") контакты
+						ul.sideMnu__sub-menu
+							li
+								a(href="#") Парковый
+							li
+								a(href="#") Лисичкино
+							li
+								a(href="#") Большая полянка
+							li
+								a(href="#") Шишкино
+							li
+								a(href="#") Лужки
+					li
+						a(href="#") фото и видео
+					li
+						a(href="#") новости
+					li
+						a(href="#") партнеры
+					li
+						a(href="#") контакты
 					li
 						a.buy-link(href="#") купить
-						+e.UL.sub-menu
-							li: a(href="#") Проекты
-							li: a(href="#") Цены
-							li: a(href="#") Спецпредложения
+						ul.sideMnu__sub-menu
+							li
+								a(href="#") Проекты
+							li
+								a(href="#") Цены
+							li
+								a(href="#") Спецпредложения
 			+e.foot
 				.row
 					.col.col-sm-6
@@ -71,7 +90,7 @@ mixin top-nav()
 						.col-auto
 							+e.burger.burger-js
 								span
-					+e.menu.d-none.d-xl-block
+					+e.menu.d-none.d-lg-block
 						+mnuMain()
 	+greenLine()
 	+sideMnu()
@@ -79,7 +98,7 @@ mixin top-nav()
 
 mixin top-nav2()
 	// start top-nav
-	+b.top-nav--orange.block-with-lazy
+	+b.top-nav.block-with-lazy(style="--link-bg: #ed5b04;")
 		+e.container.container
 			+e.main-row.row
 				.col-auto
@@ -102,13 +121,13 @@ mixin top-nav2()
 						.col-auto.ms-auto.ms-sm-0
 							+e.burger.burger-js
 								span
-					+e.menu.d-none.d-xl-block
+					+e.menu.d-none.d-lg-block
 						+mnuMain()
 	//-+greenLine()
 	+sideMnu()
 mixin top-nav3()
 	// start top-nav
-	+b.top-nav--blue.block-with-lazy
+	+b.top-nav.block-with-lazy(style="--link-bg: #2590cf;")
 		+e.container.container
 			+e.main-row.row
 				.col-auto
@@ -131,7 +150,7 @@ mixin top-nav3()
 						.col-auto.ms-auto.ms-sm-0
 							+e.burger.burger-js
 								span
-					+e.menu.d-none.d-xl-block
+					+e.menu.d-none.d-lg-block
 						+mnuMain()
 	//-+greenLine()
 	+sideMnu()
@@ -155,7 +174,7 @@ mixin top-nav4()
 						.col-auto
 							+e.burger.burger-js
 								span
-					+e.menu.d-none.d-xl-block
+					+e.menu.d-none.d-lg-block
 						+mnuQuart()
 	+greenLine()
 		li: a(href='#') Большая полянка
@@ -166,7 +185,7 @@ mixin top-nav4()
 	+sideMnu()
 
 mixin greenLine()
-	+b.green-line.d-none.d-xl-block
+	+b.green-line.d-none.d-lg-block
 		.container
 			+e.UL.menu
 				if block
@@ -184,8 +203,9 @@ mixin smSocItem(imgName)
 
 mixin buyBtnBl()
 	+e.buy-btn-cont
-		+e.buy-btn(href='#') купить
+		+e.buy-btn купить
 		+e.btns-dd
+			+e.buy-btn(href='#') купить
 			+e.buy-btn--dd(href='#') Проекты
 			+e.buy-btn--dd(href='#') Цены
 			+e.buy-btn--dd(href='#') Спецпредложения

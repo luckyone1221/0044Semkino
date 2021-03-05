@@ -3,21 +3,21 @@
 
 	padding: rem(15) 0;
 	border-bottom: 1px solid $primary;
-	@include media-breakpoint-up(xl){
+	@include media-breakpoint-up(lg){
 		padding: rem(11) 0 0 0;
 		border-bottom: none;
 	}
 
 	--link-color: #{$green2};
 	--link-bg: #{$primary};
-	&--orange{
-		--link-color: #{$green2};
-		--link-bg: #{$orange};
-	}
-	&--blue{
-		--link-color: #{$green2};
-		--link-bg: #{$blue};
-	}
+	//&--orange{
+	//	--link-color: #{$green2};
+	//	--link-bg: #{$orange};
+	//}
+	//&--blue{
+	//	--link-color: #{$green2};
+	//	--link-bg: #{$blue};
+	//}
 
 	&__container{
 
@@ -137,7 +137,7 @@
 
 		background-color: $white;
 		position: absolute;
-		top: 100%;
+		top: 0;
 		letter-spacing: 0;
 		z-index: 5;
 	}
@@ -204,7 +204,12 @@
 			&__link{
 				@include mt();
 
-				padding: 23px 10px 11px;
+				padding: 15px rem(8) rem(10);
+				letter-spacing: rem(1px);
+				@include media-breakpoint-up(xl){
+					padding: 23px 10px 11px;
+					letter-spacing: rem(2.5px);
+				}
 				@include media-breakpoint-up(xxl){
 					padding: 23px 22.5px 11px;
 				}
@@ -212,7 +217,6 @@
 				font-size: rem(14);
 				font-weight: 400;
 				text-transform: uppercase;
-				letter-spacing: rem(2.5px);
 
 				color: var(--link-color, #{$green2});
 				background-color: transparent;
@@ -312,7 +316,7 @@
 	z-index: 999;
 	top: 0;
 	left: 0;
-	width: calc(var(--vw, 1vw) * 100);
+	width: 100%;
 	height: calc(var(--vh, 1vh) * 100);
 	background-color: rgba($black, .5);
 

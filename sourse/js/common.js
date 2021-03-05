@@ -63,50 +63,7 @@ const JSCCommon = {
 		if (linkModal) addData();
 	},
 	// /modalCall
-	toggleMenu() {
-		if (this.btnToggleMenuMobile) {
-			this.btnToggleMenuMobile.forEach(element => {
-				element.addEventListener('click', () => {
-					this.btnToggleMenuMobile.forEach(element => element.classList.toggle("on"));
-					this.menuMobile.classList.toggle("active");
-					document.body.classList.toggle("fixed");
-					document.querySelector('html').classList.toggle("fixed");
-					return false;
-				});
-			});
-		}
-	},
-
-	closeMenu() {
-		if (this.menuMobile) {
-			this.btnToggleMenuMobile.forEach(element => {
-				element.classList.remove("on");
-			});
-			this.menuMobile.classList.remove("active");
-			document.body.classList.remove("fixed");
-			document.querySelector('html').classList.remove("fixed");
-		}
-
-	},
-	mobileMenu() {
-		if (this.menuMobileLink) {
-			this.toggleMenu();
-			document.addEventListener('mouseup', (event) => {
-				let container = event.target.closest(".menu-mobile--js.active"); // (1)
-				if (!container) {
-					this.closeMenu();
-				}
-			}, { passive: true });
-
-			window.addEventListener('resize', () => {
-				if (window.matchMedia("(min-width: 992px)").matches) {
-					JSCCommon.closeMenu();
-				}
-			}, { passive: true });
-		}
-	},
 	// /mobileMenu
-
 	// tabs  .
 	tabscostume(tab) {
 
@@ -233,7 +190,6 @@ function eventHandler() {
 	JSCCommon.ifie();
 	JSCCommon.modalCall();
 	JSCCommon.tabscostume('.tabs--js');
-	JSCCommon.mobileMenu();
 	JSCCommon.inputMask();
 	JSCCommon.sendForm();
 	JSCCommon.heightwindow();

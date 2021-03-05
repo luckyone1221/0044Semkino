@@ -68,58 +68,6 @@ var JSCCommon = {
 		if (linkModal) addData();
 	},
 	// /modalCall
-	toggleMenu: function toggleMenu() {
-		var _this = this;
-
-		if (this.btnToggleMenuMobile) {
-			this.btnToggleMenuMobile.forEach(function (element) {
-				element.addEventListener('click', function () {
-					_this.btnToggleMenuMobile.forEach(function (element) {
-						return element.classList.toggle("on");
-					});
-
-					_this.menuMobile.classList.toggle("active");
-
-					document.body.classList.toggle("fixed");
-					document.querySelector('html').classList.toggle("fixed");
-					return false;
-				});
-			});
-		}
-	},
-	closeMenu: function closeMenu() {
-		if (this.menuMobile) {
-			this.btnToggleMenuMobile.forEach(function (element) {
-				element.classList.remove("on");
-			});
-			this.menuMobile.classList.remove("active");
-			document.body.classList.remove("fixed");
-			document.querySelector('html').classList.remove("fixed");
-		}
-	},
-	mobileMenu: function mobileMenu() {
-		var _this2 = this;
-
-		if (this.menuMobileLink) {
-			this.toggleMenu();
-			document.addEventListener('mouseup', function (event) {
-				var container = event.target.closest(".menu-mobile--js.active"); // (1)
-
-				if (!container) {
-					_this2.closeMenu();
-				}
-			}, {
-				passive: true
-			});
-			window.addEventListener('resize', function () {
-				if (window.matchMedia("(min-width: 992px)").matches) {
-					JSCCommon.closeMenu();
-				}
-			}, {
-				passive: true
-			});
-		}
-	},
 	// /mobileMenu
 	// tabs  .
 	tabscostume: function tabscostume(tab) {
@@ -243,7 +191,6 @@ function eventHandler() {
 	JSCCommon.ifie();
 	JSCCommon.modalCall();
 	JSCCommon.tabscostume('.tabs--js');
-	JSCCommon.mobileMenu();
 	JSCCommon.inputMask();
 	JSCCommon.sendForm();
 	JSCCommon.heightwindow();
