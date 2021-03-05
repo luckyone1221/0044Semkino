@@ -32,3 +32,23 @@ mixin mnuMain()
 			+e.A.link.active(href="#"  itemprop="url") о поселке
 		each linkPatch, linkName in nav
 			+e.LI.item( itemprop="item" ): +e.A.link(href=linkPatch  itemprop="url")= linkName
+
+mixin mnuQuart()
+	-
+		var nav= {
+			"фото и видео":"#",
+			"новости":"#",
+			"контакты":"#",
+			"партнеры":"#",
+		}
+	+b.UL.navMenu(itemscope itemtype="http://schema.org/SiteNavigationElement")
+		+e.LI.item(itemprop="item")
+			+e.A.link(href="#"  itemprop="url") о поселке
+		+e.LI.item(itemprop="item")
+			+e.A.link(href="#"  itemprop="url") генплан
+		+e.LI.item(itemprop="item")
+			+e.A.link(href="#"  itemprop="url") парк
+		+e.LI.item(itemprop="item")
+			+e.A.link.active(href="#"  itemprop="url") кварталы
+		each linkPatch, linkName in nav
+			+e.LI.item( itemprop="item" ): +e.A.link(href=linkPatch  itemprop="url")= linkName

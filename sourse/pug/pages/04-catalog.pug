@@ -6,17 +6,17 @@ include ../blocks/sDescr/_sDescr.pug
 include ../blocks/sData/_sData.pug
 include ../blocks/sHeaderBaner/_sHeaderBaner.pug
 include ../blocks/sQuartDescr/_sQuartDescr.pug
+include ../blocks/sCatalog/_sCatalog.pug
 
 block variables
 	- let  mainPage= null 
 	- let  bg= null
 block title
-	- let  title= '02-lisichkino.html'
+	- let  title= '04-catalog'
 	title= title
 block pagecontent
 	+header()
-		+top-nav2()
-	+sHeaderBaner({})
-		+breadcrumb('Главная', 'Кварталы', 'Лисичкино')
-	+sQuartDescr()
+		+top-nav4()
+	+sCatalog()
+		+breadcrumb('Главная','Купить','Спецпредложения')
 	+footer()

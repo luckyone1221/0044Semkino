@@ -1,0 +1,112 @@
+// start .sCatalog
+.sCatalog {
+	background-color: $dark-green;
+	color: $white;
+
+	.container{
+		@include media-breakpoint-up(xxl){
+			position: relative;
+			left: -32px;
+		}
+	}
+	@include media-breakpoint-up(xl){
+		--sPT: #{rem(10px)};
+		--sPB: #{rem(50)};
+		--sTPB: #{rem(18px)};
+	}
+	.breadcrumb{
+		margin-bottom: rem(13);
+	}
+	.section-title{
+		h2{
+			font-weight: 700;
+			font-size: rem(30px);
+			letter-spacing: rem(.5px);
+			margin-bottom: 1px;
+		}
+		&__yellow{
+			font-size: rem(24);
+			line-height: (33/24);
+
+			color: $yellow;
+			font-weight: 700;
+			letter-spacing: rem(.5px);
+			margin-bottom: rem(9px);
+		}
+		&__small{
+			font-size: calc(10px + #{rem(4)});
+			letter-spacing: rem(-0.2px);
+			margin-bottom: 1px;
+		}
+		p{
+			font-size: rem(24);
+			letter-spacing: rem(-.37px);
+		}
+	}
+	&__row{
+		@include media-breakpoint-up(xl){
+			@include roww(30px);
+		}
+
+		& > *{
+			margin-bottom: rem(50);
+		}
+	}
+	&__img{
+		@extend .accept-ratio-frame;
+		padding-top: (471/631) * 100%;
+	}
+	&__descr{
+		@include media-breakpoint-up(xxl){
+			padding-left: rem(73);
+		}
+	}
+
+	&__txt{
+		margin-bottom: rem(15);
+
+		font-size: calc(10px + #{rem(4)});
+		line-height: (24/14);
+		letter-spacing: -.3px;
+
+		p{
+			margin-bottom: 0;
+		}
+		ul{
+			margin: 0;
+			padding: 0;
+			list-style: none;
+			li{
+
+				&:before{
+					content: '-';
+					margin-right: rem(5);
+				}
+			}
+		}
+	}
+	&__title{
+		display: block;
+		margin-bottom: rem(24);
+		color: $yellow;
+		font-size: rem(24px);
+		line-height: 1.2;
+		letter-spacing: rem(-.5pxs);
+	}
+	&__price{
+		font-size: rem(24px);
+		letter-spacing: -1px;
+
+		span{
+			margin-right: rem(12);
+		}
+		.old{
+			text-decoration: line-through;
+		}
+		.new{
+
+		}
+	}
+	&__{}
+	&__{}
+} // end.sCatalog

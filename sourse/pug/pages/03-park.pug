@@ -11,12 +11,14 @@ block variables
 	- let  mainPage= null 
 	- let  bg= null
 block title
-	- let  title= '02-lisichkino.html'
+	- let  title= '03-park'
 	title= title
 block pagecontent
 	+header()
-		+top-nav2()
-	+sHeaderBaner({})
-		+breadcrumb('Главная', 'Кварталы', 'Лисичкино')
-	+sQuartDescr()
+		+top-nav3()
+	+sHeaderBaner({
+		img: 'park-bg',
+	})
+		+breadcrumb('Главная', 'Кварталы', 'Парковый', 'О квартале')
+	+sQuartDescr2()
 	+footer()

@@ -106,16 +106,77 @@ mixin top-nav2()
 						+mnuMain()
 	//-+greenLine()
 	+sideMnu()
+mixin top-nav3()
+	// start top-nav
+	+b.top-nav--blue.block-with-lazy
+		+e.container.container
+			+e.main-row.row
+				.col-auto
+					.row.align-items-end
+						.col-auto
+							+e.logo(href='/')
+								img(loading="lazy" src="img/@2x/logo.png" alt="")
+						.col-auto
+							+e.local-logo
+								img(loading="lazy" src="img/@2x/park-logo.png" alt="")
+				.col
+					+e.top-row.row
+						.col-auto.d-none.d-sm-block.ms-sm-auto
+							+e.tel(href='tel:4912392020')
+								+e.t-icon
+									img(loading="lazy" src="img/@2x/tel-icon.png" alt="")
+								+e.t-txt (4912) 39-20-20
+						.col-auto.d-none.d-md-block
+							+e.buy-btn(href='#') купить
+						.col-auto.ms-auto.ms-sm-0
+							+e.burger.burger-js
+								span
+					+e.menu.d-none.d-xl-block
+						+mnuMain()
+	//-+greenLine()
+	+sideMnu()
+mixin top-nav4()
+	// start top-nav
+	+b.top-nav.block-with-lazy
+		+e.container.container
+			+e.main-row.row
+				.col-auto
+					+e.logo(href='/')
+						img(loading="lazy" src="img/@2x/logo.png" alt="")
+				.col
+					+e.top-row.row
+						.col-auto.ms-auto
+							+e.tel(href='tel:4912392020')
+								+e.t-icon
+									img(loading="lazy" src="img/@2x/tel-icon.png" alt="")
+								+e.t-txt (4912) 39-20-20
+						.col-auto.d-none.d-sm-block
+							+e.buy-btn(href='#') купить
+						.col-auto
+							+e.burger.burger-js
+								span
+					+e.menu.d-none.d-xl-block
+						+mnuQuart()
+	+greenLine()
+		li: a(href='#') Большая полянка
+		li: a(href='#') Парковый
+		li: a(href='#') Лисичкино
+		li: a(href='#') Шишкино
+		li: a(href='#') Лужки
+	+sideMnu()
 
 mixin greenLine()
 	+b.green-line.d-none.d-xl-block
 		.container
 			+e.UL.menu
-				li: a(href='#') Что такое домовладение
-				li: a(href='#') Расположение
-				li: a(href='#') Кварталы
-				li: a(href='#') Почему "Новое Сёмкино"?
-				li: a(href='#') Документы
+				if block
+					block
+				else
+					li: a(href='#') Что такое домовладение
+					li: a(href='#') Расположение
+					li: a(href='#') Кварталы
+					li: a(href='#') Почему "Новое Сёмкино"?
+					li: a(href='#') Документы
 mixin smSocItem(imgName)
 	.col-auto
 		+e.item(href='#')

@@ -8,6 +8,24 @@
 		--sPB: #{rem(144px)};
 		--sTPB: #{rem(158px)};
 	}
+
+	&--alt{
+		@include media-breakpoint-up(xl){
+			--sPT: #{rem(81px)};
+			--sPB: #{rem(112px)};
+			--sTPB: #{rem(44px)};
+		}
+		.section-title{
+			h2{
+				margin-bottom: rem(30px);
+				@include media-breakpoint-up(lg){
+					margin-bottom: rem(71px);
+				}
+			}
+
+		}
+	}
+
 	&__container{
 		@include media-breakpoint-up(xxl){
 			padding: 0 5px;
@@ -15,13 +33,16 @@
 	}
 	.section-title{
 		@include media-breakpoint-up(xxl){
-			max-width: 95%;
+			max-width: 93.5%;
 		}
 		h2{
 			color: $white;
 			font-weight: 700;
 			letter-spacing: rem(.9px);
 			margin-bottom: rem(32);
+		}
+		.ident-15{
+			text-indent: rem(15);
 		}
 		p{
 			line-height: (28/18);
@@ -38,6 +59,32 @@
 			&:hover{
 				text-decoration: none;
 				color: rgba($white, .8);
+			}
+		}
+		&__img{
+			@extend .accept-ratio-frame-nh;
+			padding-top: (720/1280) * 100%;
+
+			margin-bottom: rem(40);
+			@include media-breakpoint-up(lg){
+				margin-bottom: rem(63);
+			}
+		}
+
+		ul{
+			list-style: none;
+			margin: 0 0 rem(30);
+			padding: 0;
+
+			li{
+				line-height: 1.6;
+				letter-spacing: rem(-.1px);
+				font-size: rem(17.5px);
+
+				&:before{
+					content: '-';
+					margin-right: rem(5);
+				}
 			}
 		}
 	}

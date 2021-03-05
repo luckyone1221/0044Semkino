@@ -1,0 +1,41 @@
+mixin sCatalog(data)
+	// start sCatalog
+	+b.SECTION.sCatalog.section#sCatalog&attributes(attributes)
+		.container
+			block
+			+b.section-title
+				h2 Спецпредложения
+				+e.yellow Зимние скидки на строящиеся домовладения**!
+				+e.small Цены ниже указаны с учётом скидок!
+				p Готовые и строящиеся домовладения
+			+e.row.row
+				+catalogItem()
+				+catalogItem()
+				+catalogItem()
+	// end sCatalog
+
+mixin catalogItem()
+	.col-md-6.pe-xxl-43
+		+e.img(href='#')
+			img(loading="lazy" src="img/@2x/catalog-img.jpg" alt="")
+	.col-md-6
+		+e.descr
+			+e.txt
+				+e.A.title(href='#') Квартал "Лужки", ул. Луговая, д. 26
+				p Площадь участка: 13,14 сот.
+				p Площадь дома (без площади крыльца и балкона): 149,49 кв. м.
+				p Площадь крыльца и балкона: 13,46 кв. м.
+				p Проект: 095-3 (Коллекция "Голливуд").
+				p Забор.
+				p Парковка из брусчатки перед участком.
+				p Централизованные коммуникации:
+				ul
+					li канализация,
+					li водопровод (собственная артезианская скважина),
+					li электричество,
+					li газ,
+					li высокоскоростной интернет и цифровое ТВ*.
+			+e.price
+				span Цена:
+				span.old 5 385 000 руб.
+				span.new 5 230 000 руб.
