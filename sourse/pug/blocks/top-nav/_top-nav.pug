@@ -1,42 +1,4 @@
-mixin mob-mnu()
-	+b.menu-mobile--js.d-lg-none
-		+b.toggle-menu-mobile--js
-			span
-		+e.inner
-			+mnu()
-			.text-right
-	//  мобильное меню
-
-mixin top-nav() 
-	// start top-nav
-	+b.top-nav.block-with-lazy
-		+e.container.container
-			+e.main-row.row
-				.col-auto
-					+e.logo(href='/')
-						img(loading="lazy" src="img/@2x/logo.png" alt="")
-				.col
-					+e.top-row.row
-						.col-auto.ms-auto
-							+e.tel(href='tel:4912392020')
-								+e.t-icon
-									img(loading="lazy" src="img/@2x/tel-icon.png" alt="")
-								+e.t-txt (4912) 39-20-20
-						.col-auto.d-none.d-sm-block
-							+e.buy-btn(href='#') купить
-						.col-auto
-							+e.burger.burger-js
-								span
-					+e.menu.d-none.d-xl-block
-						+mnu()
-	+b.green-line.d-none.d-xl-block
-		.container
-			+e.UL.menu
-				li: a(href='#') Что такое домовладение
-				li: a(href='#') Расположение
-				li: a(href='#') Кварталы
-				li: a(href='#') Почему "Новое Сёмкино"?
-				li: a(href='#') Документы
+mixin sideMnu()
 	+b.sideMnu--js
 		+e.box.sideMnu-box-js
 			+e.content
@@ -87,8 +49,73 @@ mixin top-nav()
 							+smSocItem('fb')
 							+smSocItem('b')
 							+smSocItem('inst')
+	//  мобильное меню
+
+mixin top-nav() 
+	// start top-nav
+	+b.top-nav.block-with-lazy
+		+e.container.container
+			+e.main-row.row
+				.col-auto
+					+e.logo(href='/')
+						img(loading="lazy" src="img/@2x/logo.png" alt="")
+				.col
+					+e.top-row.row
+						.col-auto.ms-auto
+							+e.tel(href='tel:4912392020')
+								+e.t-icon
+									img(loading="lazy" src="img/@2x/tel-icon.png" alt="")
+								+e.t-txt (4912) 39-20-20
+						.col-auto.d-none.d-sm-block
+							+e.buy-btn(href='#') купить
+						.col-auto
+							+e.burger.burger-js
+								span
+					+e.menu.d-none.d-xl-block
+						+mnuMain()
+	+greenLine()
+	+sideMnu()
 	// end top-nav
 
+mixin top-nav2()
+	// start top-nav
+	+b.top-nav--orange.block-with-lazy
+		+e.container.container
+			+e.main-row.row
+				.col-auto
+					.row.align-items-end
+						.col-auto
+							+e.logo(href='/')
+								img(loading="lazy" src="img/@2x/logo.png" alt="")
+						.col-auto
+							+e.local-logo
+								img(loading="lazy" src="img/@2x/lisichkino.png" alt="")
+				.col
+					+e.top-row.row
+						.col-auto.d-none.d-sm-block.ms-sm-auto
+							+e.tel(href='tel:4912392020')
+								+e.t-icon
+									img(loading="lazy" src="img/@2x/tel-icon.png" alt="")
+								+e.t-txt (4912) 39-20-20
+						.col-auto.d-none.d-md-block
+							+e.buy-btn(href='#') купить
+						.col-auto.ms-auto.ms-sm-0
+							+e.burger.burger-js
+								span
+					+e.menu.d-none.d-xl-block
+						+mnuMain()
+	//-+greenLine()
+	+sideMnu()
+
+mixin greenLine()
+	+b.green-line.d-none.d-xl-block
+		.container
+			+e.UL.menu
+				li: a(href='#') Что такое домовладение
+				li: a(href='#') Расположение
+				li: a(href='#') Кварталы
+				li: a(href='#') Почему "Новое Сёмкино"?
+				li: a(href='#') Документы
 mixin smSocItem(imgName)
 	.col-auto
 		+e.item(href='#')

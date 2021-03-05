@@ -13,6 +13,7 @@ $rfs-breakpoint: 1200px !default;
 // Color system
 
 $white: #fff !default;
+$light3: #dcdedd;
 $gray-100: #f8f9fa !default;
 $gray-200: #e9ecef !default;
 $gray-300: #dee2e6 !default;
@@ -42,7 +43,7 @@ $indigo: #6610f2 !default;
 $purple: #6f42c1 !default;
 $pink: #d63384 !default;
 $red: #dc3545 !default;
-$orange: #fd7e14 !default;
+$orange: #ed5b04 !default;
 $yellow: #fed531 !default;
 $green: #6a9f44 !default;
 $green2: #3a5b22;
@@ -433,7 +434,7 @@ $line-height-sm: 1.25 !default;
 $line-height-lg: 2 !default;
 
 $h1-font-size: $font-size-base * 2.5 !default;
-$h2-font-size: $font-size-base * 2 !default;
+$h2-font-size: rem(36px) !default;
 $h3-font-size: $font-size-base * 1.75 !default;
 $h4-font-size: $font-size-base * 1.5 !default;
 $h5-font-size: $font-size-base * 1.25 !default;

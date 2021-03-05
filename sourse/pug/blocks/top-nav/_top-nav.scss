@@ -8,6 +8,13 @@
 		border-bottom: none;
 	}
 
+	--link-color: #{$green2};
+	--link-bg: #{$primary};
+	&--orange{
+		--link-color: #{$green2};
+		--link-bg: #{$orange};
+	}
+
 	&__container{
 
 	}
@@ -24,6 +31,22 @@
 		width: 87px;
 		@include media-breakpoint-up(sm){
 			width: rem(130px);
+		}
+
+		img{
+			width: auto;
+			height: auto;
+			max-width: 100%;
+		}
+	}
+	&__local-logo{
+		position: relative;
+		max-width: rem(150);
+		@include media-breakpoint-up(xxl){
+			width: auto;
+			height: auto;
+			margin-left: 13px;
+			bottom: -12px;
 		}
 
 		img{
@@ -146,33 +169,30 @@
 				&:last-child{
 					--link-aft-cont: none;
 				}
-
-				//&:first-child{
-				//	a{
-				//		color: $white!important;
-				//		background-color: $primary!important;
-				//	}
-				//}
 			}
 			&__link{
 				@include mt();
-				padding: 23px 22.5px 11px;
+
+				padding: 23px 10px 11px;
+				@include media-breakpoint-up(xxl){
+					padding: 23px 22.5px 11px;
+				}
 				//var(--link-padding-x)
 				font-size: rem(14);
 				font-weight: 400;
 				text-transform: uppercase;
 				letter-spacing: rem(2.5px);
 
-				color: $green2;
+				color: var(--link-color, #{$green2});
 				background-color: transparent;
-				&:hover{
+        &.active,&:hover{
 					color: $white;
-				}
-				&:hover:after{
-					color: transparent;
-				}
-				&:hover:before{
-					background-color: $primary;
+          &:after{
+            color: transparent;
+          }
+          &:before{
+            background-color: var(--link-bg, #{$primary});
+          }
 				}
 
 

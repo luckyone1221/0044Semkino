@@ -4,17 +4,19 @@ include ../blocks/sContent/_sContent.pug
 include ../blocks/sContact/_sContact.pug
 include ../blocks/sDescr/_sDescr.pug
 include ../blocks/sData/_sData.pug
+include ../blocks/sHeaderBaner/_sHeaderBaner.pug
+include ../blocks/sQuartDescr/_sQuartDescr.pug
 
 block variables
 	- let  mainPage= null 
 	- let  bg= null
 block title
-	- let  title= 'title'
+	- let  title= '02-lisichkino.html'
 	title= title
 block pagecontent
 	+header()
-		+top-nav()
-	+headerBlock()
-	+sDescr()
-	+sData()
+		+top-nav2()
+	+sHeaderBaner()
+		+breadcrumb('Главная', 'Кварталы', 'Лисичкино')
+	+sQuartDescr()
 	+footer()

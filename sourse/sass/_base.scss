@@ -484,3 +484,35 @@ iframe {
 		display: none
 	}
 }
+//
+.breadcrumb{
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+
+	&-item{
+		&:last-child{
+			a:after{
+				content: none;
+			}
+		}
+		a{
+			font-size: 13px;
+			color: $white;
+			&:hover{
+				color: rgba($white, .9);
+			}
+			&:after{
+				content: '/';
+				padding: 0 rem(4);
+			}
+		}
+	}
+}
+//
+.btn-primary{
+	color: $white!important;
+}

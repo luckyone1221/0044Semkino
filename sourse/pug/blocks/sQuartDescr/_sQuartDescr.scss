@@ -1,0 +1,99 @@
+// start .sQuartDescr
+.sQuartDescr {
+	background-color: $dark-green;
+	color: $white;
+
+	@include media-breakpoint-up(xl){
+		--sPT: #{rem(105px)};
+		--sPB: #{rem(144px)};
+		--sTPB: #{rem(158px)};
+	}
+	&__container{
+		@include media-breakpoint-up(xxl){
+			padding: 0 5px;
+		}
+	}
+	.section-title{
+		@include media-breakpoint-up(xxl){
+			max-width: 95%;
+		}
+		h2{
+			color: $white;
+			font-weight: 700;
+			letter-spacing: rem(.9px);
+			margin-bottom: rem(32);
+		}
+		p{
+			line-height: (28/18);
+			letter-spacing: rem(-0.36px);
+			margin-bottom: rem(27);
+		}
+		a{
+			display: block;
+			line-height: (28/18);
+			letter-spacing: rem(-0.36px);
+
+			color: $white;
+			text-decoration: underline;
+			&:hover{
+				text-decoration: none;
+				color: rgba($white, .8);
+			}
+		}
+	}
+	&__row{
+		@include roww(rem(35));
+		& > *{
+			margin-bottom: rem(35);
+		}
+		margin-bottom: rem(-35);
+	}
+	//
+	&__item{
+		color: $body-color;
+		background-color: $light3;
+
+		padding: rem(30) rem(20);
+		@include media-breakpoint-up(xl){
+			padding: rem(35) rem(36px) rem(29px);
+		}
+
+		min-height: rem(300);
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+	}
+	&__title{
+		font-weight: 700;
+		letter-spacing: rem(.3px);
+
+		font-size: rem(21);
+		@include media-breakpoint-up(xxl){
+			font-size: rem(24);
+		}
+		margin-bottom: rem(30);
+	}
+	&__descr{
+		font-size: rem(15.5);
+		line-height: 1.25;
+		letter-spacing: rem(1);
+		margin-bottom: rem(30);
+	}
+	&__btn{
+		margin-top: auto;
+		@extend .btn;
+		@extend .btn-primary;
+
+		color: $white;
+		padding: rem(12);
+		min-width: rem(176);
+
+		font-size: rem(17px);
+		line-height: (23.67/18);
+		text-transform: uppercase;
+		letter-spacing: rem(0);
+	}
+	&__{}
+	&__{}
+	&__{}
+} // end.sQuartDescr
