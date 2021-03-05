@@ -67,7 +67,7 @@ mixin top-nav()
 									img(loading="lazy" src="img/@2x/tel-icon.png" alt="")
 								+e.t-txt (4912) 39-20-20
 						.col-auto.d-none.d-sm-block
-							+e.buy-btn(href='#') купить
+							+buyBtnBl()
 						.col-auto
 							+e.burger.burger-js
 								span
@@ -98,7 +98,7 @@ mixin top-nav2()
 									img(loading="lazy" src="img/@2x/tel-icon.png" alt="")
 								+e.t-txt (4912) 39-20-20
 						.col-auto.d-none.d-md-block
-							+e.buy-btn(href='#') купить
+							+buyBtnBl()
 						.col-auto.ms-auto.ms-sm-0
 							+e.burger.burger-js
 								span
@@ -127,7 +127,7 @@ mixin top-nav3()
 									img(loading="lazy" src="img/@2x/tel-icon.png" alt="")
 								+e.t-txt (4912) 39-20-20
 						.col-auto.d-none.d-md-block
-							+e.buy-btn(href='#') купить
+							+buyBtnBl()
 						.col-auto.ms-auto.ms-sm-0
 							+e.burger.burger-js
 								span
@@ -151,7 +151,7 @@ mixin top-nav4()
 									img(loading="lazy" src="img/@2x/tel-icon.png" alt="")
 								+e.t-txt (4912) 39-20-20
 						.col-auto.d-none.d-sm-block
-							+e.buy-btn(href='#') купить
+							+buyBtnBl()
 						.col-auto
 							+e.burger.burger-js
 								span
@@ -181,3 +181,11 @@ mixin smSocItem(imgName)
 	.col-auto
 		+e.item(href='#')
 			img(loading="lazy" src=`img/@2x/${imgName}.png` alt="")
+
+mixin buyBtnBl()
+	+e.buy-btn-cont
+		+e.buy-btn(href='#') купить
+		+e.btns-dd
+			+e.buy-btn--dd(href='#') Проекты
+			+e.buy-btn--dd(href='#') Цены
+			+e.buy-btn--dd(href='#') Спецпредложения
