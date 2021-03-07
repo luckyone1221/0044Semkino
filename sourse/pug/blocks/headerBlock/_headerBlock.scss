@@ -76,7 +76,10 @@
 		flex-direction: column;
 		justify-content: center;
 
-		height: rem(600);
+		height: rem(500);
+		@include media-breakpoint-up(sm){
+			height: rem(600);
+		}
 		@include media-breakpoint-up(xl){
 			height: auto;
 			min-height: calc((var(--vh, 1vh) * 100) - var(--header-height) + 1px);
@@ -86,7 +89,7 @@
 		color: $white;
 		line-height: (73.5/72);
 
-		font-size: rem(30px);
+		font-size: rem(46px);
 		@include media-breakpoint-up(sm){
 			font-size: rem(72px);
 		}

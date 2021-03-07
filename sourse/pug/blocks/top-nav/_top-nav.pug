@@ -91,14 +91,13 @@ mixin top-nav()
 							+e.burger.burger-js
 								span
 					+e.menu.d-none.d-lg-block
-						+mnuMain()
-	+greenLine()
+						+mnu()
 	+sideMnu()
 	// end top-nav
 
 mixin top-nav2()
 	// start top-nav
-	+b.top-nav.block-with-lazy(style="--link-bg: #ed5b04;")
+	+b.top-nav.block-with-lazy
 		+e.container.container
 			+e.main-row.row
 				.col-auto
@@ -122,12 +121,12 @@ mixin top-nav2()
 							+e.burger.burger-js
 								span
 					+e.menu.d-none.d-lg-block
-						+mnuMain()
+						+mnu()
 	//-+greenLine()
 	+sideMnu()
 mixin top-nav3()
 	// start top-nav
-	+b.top-nav.block-with-lazy(style="--link-bg: #2590cf;")
+	+b.top-nav.block-with-lazy
 		+e.container.container
 			+e.main-row.row
 				.col-auto
@@ -151,8 +150,7 @@ mixin top-nav3()
 							+e.burger.burger-js
 								span
 					+e.menu.d-none.d-lg-block
-						+mnuMain()
-	//-+greenLine()
+						+mnu()
 	+sideMnu()
 mixin top-nav4()
 	// start top-nav
@@ -175,7 +173,7 @@ mixin top-nav4()
 							+e.burger.burger-js
 								span
 					+e.menu.d-none.d-lg-block
-						+mnuQuart()
+						+mnu()
 	+greenLine()
 		li: a(href='#') Большая полянка
 		li: a(href='#') Парковый
@@ -184,8 +182,8 @@ mixin top-nav4()
 		li: a(href='#') Лужки
 	+sideMnu()
 
-mixin greenLine()
-	+b.green-line.d-none.d-lg-block
+mixin greenLine(addClasses,modificator='')
+	+b.green-line.d-none.d-lg-block(class=addClasses)
 		.container
 			+e.UL.menu
 				if block
@@ -193,7 +191,7 @@ mixin greenLine()
 				else
 					li: a(href='#') Что такое домовладение
 					li: a(href='#') Расположение
-					li: a(href='#') Кварталы
+					li: a(href='#')=`Кварталы${modificator}`
 					li: a(href='#') Почему "Новое Сёмкино"?
 					li: a(href='#') Документы
 mixin smSocItem(imgName)

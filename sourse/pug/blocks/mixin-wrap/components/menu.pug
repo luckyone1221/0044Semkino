@@ -1,54 +1,21 @@
 //- menu
 mixin mnu()
-	-
-		var nav= {
-			"о поселке":"#",
-			"генплан":"#",
-			"парк":"#",
-			"кварталы":"#",
-			"фото и видео":"#",
-			"новости":"#",
-			"контакты":"#",
-			"партнеры":"#",
-			}
 	+b.UL.navMenu(itemscope itemtype="http://schema.org/SiteNavigationElement")
-		each linkPatch, linkName in nav
-			+e.LI.item( itemprop="item" ): +e.A.link(href= linkPatch  itemprop="url")= linkName
+		+e.LI.item( itemprop="item" )
+			+e.A.link(href='#'  itemprop="url") о поселке
+			+greenLine()
+		+e.LI.item( itemprop="item" ): +e.A.link(href='#'  itemprop="url") генплан
+		+e.LI.item( itemprop="item" ): +e.A.link(href='#'  itemprop="url") парк
+		+e.LI.item( itemprop="item" )
+			+e.A.link(href='#'  itemprop="url") кварталы
+			+greenLine()
+				li: a(href='#') Большая полянка
+				li: a(href='#') Парковый
+				li: a(href='#') Лисичкино
+				li: a(href='#') Шишкино
+				li: a(href='#') Лужки
+		+e.LI.item( itemprop="item" ): +e.A.link(href='#'  itemprop="url") фото и видео
+		+e.LI.item( itemprop="item" ): +e.A.link(href='#'  itemprop="url") новости
+		+e.LI.item( itemprop="item" ): +e.A.link(href='#'  itemprop="url") контакты
+		+e.LI.item( itemprop="item" ): +e.A.link(href='#'  itemprop="url") партнеры
 //- /menu
-
-mixin mnuMain()
-	-
-		var nav= {
-			"генплан":"#",
-			"парк":"#",
-			"кварталы":"#",
-			"фото и видео":"#",
-			"новости":"#",
-			"контакты":"#",
-			"партнеры":"#",
-		}
-	+b.UL.navMenu(itemscope itemtype="http://schema.org/SiteNavigationElement")
-		+e.LI.item(itemprop="item")
-			+e.A.link.active(href="#"  itemprop="url") о поселке
-		each linkPatch, linkName in nav
-			+e.LI.item( itemprop="item" ): +e.A.link(href=linkPatch  itemprop="url")= linkName
-
-mixin mnuQuart()
-	-
-		var nav= {
-			"фото и видео":"#",
-			"новости":"#",
-			"контакты":"#",
-			"партнеры":"#",
-		}
-	+b.UL.navMenu(itemscope itemtype="http://schema.org/SiteNavigationElement")
-		+e.LI.item(itemprop="item")
-			+e.A.link(href="#"  itemprop="url") о поселке
-		+e.LI.item(itemprop="item")
-			+e.A.link(href="#"  itemprop="url") генплан
-		+e.LI.item(itemprop="item")
-			+e.A.link(href="#"  itemprop="url") парк
-		+e.LI.item(itemprop="item")
-			+e.A.link.active(href="#"  itemprop="url") кварталы
-		each linkPatch, linkName in nav
-			+e.LI.item( itemprop="item" ): +e.A.link(href=linkPatch  itemprop="url")= linkName

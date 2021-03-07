@@ -78,6 +78,11 @@ mixin oWhiteBox(title)
 		+e.o-btn(href='#') Смотреть
 mixin dataSlider()
 	+e.sl-cont
+		+e.s-content
+			+e.s-txt
+				| Фотогалерея
+				br
+				| жителей поселка
 		.swiper-container.sData-slider-js
 			+arrow()
 			.swiper-wrapper
@@ -89,8 +94,3 @@ mixin dataSlide()
 	.swiper-slide
 		+e.s-img
 			img.swiper-lazy(src="#" data-src="img/@2x/data-slide-1.jpg" alt="")
-		+e.s-content
-			+e.s-txt
-				| Фотогалерея
-				br
-				| жителей поселка

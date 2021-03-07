@@ -87,12 +87,7 @@ var JSCCommon = {
 					tabs.Content[index].classList.add('active');
 				}
 			});
-		}); // $('.' + tab + '__caption').on('click', '.' + tab + '__btn:not(.active)', function (e) {
-		// 	$(this)
-		// 		.addClass('active').siblings().removeClass('active')
-		// 		.closest('.' + tab).find('.' + tab + '__content').hide().removeClass('active')
-		// 		.eq($(this).index()).fadeIn().addClass('active');
-		// });
+		});
 	},
 	// /tabs
 	inputMask: function inputMask() {
